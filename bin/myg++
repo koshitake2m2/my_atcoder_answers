@@ -18,4 +18,4 @@ shift
 arguments="$@"
 
 rm -f $executable_file
-g++ $cflags $filename -o $executable_file && ./$executable_file $arguments
+g++ $cflags $filename -o $executable_file && echo "Compile successful!!" && ./$executable_file $arguments

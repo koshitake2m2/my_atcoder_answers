@@ -20,6 +20,6 @@ mkdir $output_dir
 prev_dir=`pwd`
 
 
-scalac -d $output_dir $filename && cd $output_dir && scala Main
+scalac -d $output_dir $filename && cd $output_dir && echo "Compile successful!!" && scala Main
 cd $prev_dir # 正しいディレクトリに戻るため.
 rm -rf $output_dir
