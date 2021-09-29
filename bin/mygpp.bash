@@ -1,0 +1,21 @@
+#!/bin/bash
+
+## README.md に記載してあるように, brewでインストールしたgccのincludeパスを追加する.
+cflags="-I /opt/homebrew/include"
+
+while test "$1" != ""; do
+  case $1 in
+    -*) cflags="$cflags $1" ;; 
+    *) break ;;
+  esac
+  shift
+done
+
+filename=$1
+executable_file="a.out"
+
+shift
+arguments="$@"
+
+rm -f $executable_file
+g++ $cflags $filename -o $executable_file && ./$executable_file $arguments
