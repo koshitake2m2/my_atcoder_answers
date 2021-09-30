@@ -3,7 +3,9 @@ AtCoderの回答
 
 # C++
 
-## 環境構築
+## コマンドライン環境
+
+### 環境構築
 
 #### 対象環境
 - MacBook Air (M1, 2020)
@@ -34,7 +36,7 @@ brew でインストールした gcc を vscode で使えるようにするた�
 2. c_cpp_properties.json の compilerPath に `/opt/homebrew/bin/g++` を追加する.
 
 
-## 実行
+### 実行
 
 ```bash
 ../bin/myg++ a.cpp
@@ -42,15 +44,27 @@ brew でインストールした gcc を vscode で使えるようにするた�
 
 # Scala
 
-## 環境構築
+## コマンドライン環境
+
+### 環境構築
+
+#### 対象環境
+- MacBook Air (M1, 2020)
+- vscode
+
+#### scala関連インストール
 
 ```bash
 brew install coursier/formulas/coursier && cs setup
 ```
 
-## 実行
+### 実行
 
 ```bash
 ../bin/myscalac a.scala
 ```
 
+## sbt & IntelliJ IDEA
+
+### 環境構築
+build.sbtをよしなにロードする

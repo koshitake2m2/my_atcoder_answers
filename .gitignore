@@ -1,9 +1,20 @@
 .vscode/*
 !.vscode/c_cpp_properties.json
+.metals
 
 a.out
 a.out.dSYM/
 
+target
+.bsp
+
+*~
+.#*
+.*.swp
+
 .idea
-.metals
+.idea/*
+.idea_modules
+*.iml
+
 .DS_Store
