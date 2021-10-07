@@ -1,9 +1,9 @@
 # my atcoder answers
 AtCoderの回答
 
-# C++
+# C++ (GCC)
 
-## コマンドライン環境
+## vscode & コマンドライン
 
 ### 環境構築
 
@@ -28,7 +28,7 @@ mkdir /opt/homebrew/include/bits
 cp /opt/homebrew/Cellar/gcc/11.2.0/include/c++/11.1.0/aarch64-apple-darwin20/bits/stdc++.h /opt/homebrew/include/bits
 ```
 
-#### vscode
+#### vscodeの設定
 
 brew でインストールした gcc を vscode で使えるようにするための設定.
 
@@ -41,6 +41,7 @@ brew でインストールした gcc を vscode で使えるようにするた�
 ```bash
 ../bin/myg++ a.cpp
 ```
+
 
 # Scala
 
@@ -64,7 +65,13 @@ brew install coursier/formulas/coursier && cs setup
 ../bin/myscalac a.scala
 ```
 
-## sbt & IntelliJ IDEA
+## IntelliJ IDEA
 
 ### 環境構築
 build.sbtをよしなにロードする
+
+### 実行
+`object Main extends App` を実行する
+
+### 提出
+🚨 注意: AtCoder提出時には必ず `package ...` を削除すること. CEの原因になるため.
