@@ -8,4 +8,7 @@ object FormatSample extends App {
   println(i)
   println(f"${math.pow(2, i)}%.0f")
   println(f"$a%.0f")
+
+  // 0埋め
+  println(f"0埋め: ${3}%04d, ${1111}%04d")
 }
