@@ -7,12 +7,10 @@ void solve() {
   int n, r;
   cin >> n >> r;
   if (n > 10) {
-      cout << r << endl;
+    cout << r << endl;
   } else {
-      cout << r + 100 * (10 - n) << endl;
+    cout << r + 100 * (10 - n) << endl;
   }
 }
 
-int main() {
-  solve();
-}
+int main() { solve(); }
