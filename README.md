@@ -39,7 +39,7 @@ brew でインストールした gcc を vscode で使えるようにするた�
 ### 実行
 
 ```bash
-../bin/myg++ a.cpp
+../../bin/myg++ a.cpp
 ```
 
 
