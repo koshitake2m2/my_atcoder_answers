@@ -28,6 +28,10 @@ mkdir /opt/homebrew/include/bits
 cp /opt/homebrew/Cellar/gcc/11.2.0/include/c++/11.1.0/aarch64-apple-darwin20/bits/stdc++.h /opt/homebrew/include/bits
 ```
 
+その他参考
+- [AP1 - 付録1.コードテストの使い方](https://atcoder.jp/contests/APG4b/tasks/APG4b_ak)
+  - 「手元のコンピュータでプログラムを書きたい場合」
+
 #### vscodeの設定
 
 brew でインストールした gcc を vscode で使えるようにするための設定.
@@ -41,6 +45,25 @@ brew でインストールした gcc を vscode で使えるようにするた�
 ```bash
 ../../bin/myg++ a.cpp
 ```
+
+# Python3
+
+## vscode
+
+### 環境構築
+
+#### 対象環境
+- MacBook Air (M1, 2020)
+- vscode
+
+#### pythonインストール
+- anyenvでよしなに
+
+#### pip
+- flake8
+
+#### vscodeのプラグイン
+- Python
 
 
 # Scala
