@@ -21,7 +21,10 @@ object BinarySearchSample extends App {
       f: Long => Long
   ) extends BinarySearch {
 
-    /** key <= f(array(index)) となる最小のindexを求める. */
+    /** key <= f(array(index)) となる最小のindexを求める.
+      * この時, f(array(x))が単調増加であれば, leftをngとすれば扱いやすくなる.
+      * 最小のindex見つからない場合は, array.sizeを返す.
+      */
     def lowerBound(key: Long): Int = {
       @tailrec
       def lowerBound(ng: Int, ok: Int): Int =
@@ -35,10 +38,12 @@ object BinarySearchSample extends App {
             lowerBound(mid, ok)
           }
         }
-      lowerBound(-1, array.length - 1)
+      lowerBound(-1, array.length)
     }
 
-    /** key < f(array(index)) となる最小のindexを求める. */
+    /** key < f(array(index)) となる最小のindexを求める.
+      * 最小のindex見つからない場合は, array.sizeを返す.
+      */
     def upperBound(key: Long): Int = {
       @tailrec
       def upperBound(ng: Int, ok: Int): Int =
@@ -52,7 +57,7 @@ object BinarySearchSample extends App {
             upperBound(mid, ok)
           }
         }
-      upperBound(-1, array.length - 1)
+      upperBound(-1, array.length)
     }
   }
 
@@ -66,6 +71,14 @@ object BinarySearchSample extends App {
   val bs2 = BinarySearch1(array2, identity)
   check(bs2.lowerBound(8), 2)
   check(bs2.upperBound(8), 2)
+  check(bs2.lowerBound(0), 0)
+  check(bs2.upperBound(0), 0)
+  check(bs2.lowerBound(1), 0)
+  check(bs2.upperBound(1), 1)
+  check(bs2.lowerBound(100), 9)
+  check(bs2.upperBound(100), 10)
+  check(bs2.lowerBound(101), 10)
+  check(bs2.upperBound(101), 10)
   val bs3 = BinarySearch1(array3, identity)
   check(bs3.lowerBound(9), 2)
   check(bs3.upperBound(9), 5)
