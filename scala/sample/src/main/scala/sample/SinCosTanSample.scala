@@ -3,16 +3,17 @@ package sample
 object SinCosTanSample extends App {
   // 1 [radian] = 180.0 / Pi [degree]
   // 1 [degree] = Pi / 180.0 [radian]
+  // ex) 45° = 45 * Pi / 180.0 = π/4 [rad]
 
   /** ラジアン */
   case class Radian(toDouble: Double) {
     def toStringWithPi: String = s"${toDouble / math.Pi} * π [rad]"
-    def toDegree: Degree = Degree(toDouble * 180.0 / math.Pi)
+    def toDegree: Degree = Degree(math.toDegrees(toDouble))
   }
 
   /** 度 */
   case class Degree(toDouble: Double) {
-    def toRadian: Radian = Radian(toDouble * math.Pi / 180.0)
+    def toRadian: Radian = Radian(math.toRadians(toDouble))
   }
 
   /** 傾き */
