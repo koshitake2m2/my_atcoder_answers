@@ -1,5 +1,12 @@
 # my atcoder answers
-AtCoderの回答
+AtCoderの回答, 及び, 競プロで便利なライブラリ集.
+
+AtCoderのプロフィール: [https://atcoder.jp/users/takeshi33333](https://atcoder.jp/users/takeshi33333)
+
+回答で使用している言語は以下の通り.
+- c++
+- python3
+- scala
 
 # C++ (GCC)
 
