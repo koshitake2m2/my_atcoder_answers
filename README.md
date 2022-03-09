@@ -105,3 +105,56 @@ build.sbtをよしなにロードする
 
 ### 提出
 🚨 注意: AtCoder提出時には必ず `package ...` を削除すること. CEの原因になるため.
+
+
+# Rust
+
+## 環境構築
+
+```bash
+brew install rustup-init
+rustup-init
+exec $SHELL -l
+cat <<-EOF >> $HOME/.cargo/config
+[net]
+git-fetch-with-cli = true
+EOF
+
+cargo install cargo-edit
+cargo install cargo-watch
+rustup component add rls rust-src rust-analysis
+```
+
+## コンテスト毎に行うこと
+
+1. cargo projectを作成する
+2. Intellijの場合、cargo projectとして見做すようにする
+   - "File does not belong to any known Cargo project" と問われるので "Attach" を選択
+
+```bash
+# 1. 新しくcargo projectを作るためにtemplateをコピーする
+cp -r rust/template rust/abc123
+
+# 2. 一度cargoを実行しておく
+cargo run --bin a
+```
+
+## vscode
+
+- rustのプラグインをインストールする
+
+```bash
+# 保存時コンパイル&実行
+cargo watch -x run
+# 保存時フォーマット
+cargo watch -- cargo fmt
+```
+
+## IntelliJ IDEA
+
+- rustのプラグインをインストールする
+  - [Rust - IntelliJ IDEs Plugin | Marketplace](https://plugins.jetbrains.com/plugin/8182-rust)
+
+- Settings / Preferences / Languages & Frameworks / Rust / Rustfmt
+  - [x] Use rustfmt instead of built-in formatter
+  - [x] Run rustfmt on Save
