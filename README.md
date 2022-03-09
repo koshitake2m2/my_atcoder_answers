@@ -4,9 +4,10 @@ AtCoderの回答, 及び, 競プロで便利なライブラリ集.
 AtCoderのプロフィール: [https://atcoder.jp/users/takeshi33333](https://atcoder.jp/users/takeshi33333)
 
 回答で使用している言語は以下の通り.
-- c++
-- python3
-- scala
+- C++
+- Python3
+- Scala
+- Rust
 
 # C++ (GCC)
 
@@ -109,7 +110,13 @@ build.sbtをよしなにロードする
 
 # Rust
 
-## 環境構築
+### 環境構築
+
+#### 対象環境
+- MacBook Air (M1, 2020)
+- vscode
+
+#### インストール
 
 ```bash
 brew install rustup-init
@@ -125,7 +132,7 @@ cargo install cargo-watch
 rustup component add rls rust-src rust-analysis
 ```
 
-## コンテスト毎に行うこと
+### コンテスト毎に行うこと
 
 1. cargo projectを作成する
 2. Intellijの場合、cargo projectとして見做すようにする
