@@ -3,6 +3,13 @@
 version = 3
 
 [[package]]
+name = "answers"
+version = "0.1.0"
+dependencies = [
+ "proconio",
+]
+
+[[package]]
 name = "lazy_static"
 version = "1.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -15,11 +22,4 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a419339c658e4bb054e62cb6aa1cd948e7042c72aa328761097bd35dc01de1b5"
 dependencies = [
  "lazy_static",
-]
-
-[[package]]
-name = "template"
-version = "0.1.0"
-dependencies = [
- "proconio",
 ]
