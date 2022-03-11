@@ -134,13 +134,14 @@ rustup component add rls rust-src rust-analysis
 
 ### コンテスト毎に行うこと
 
-1. Cargo.tomlにbinが定義されていなければ定義すること
-2. ファイル作成ごとに `Refresh Cargo Projects` をすること
+1. Cargo.tomlにbinが定義されていなければ定義すること. 実行可能ファイルにするため. 
+2. ファイル作成ごとに `Refresh Cargo Projects` をすること. 実行可能にするため.
 
 ### Cargo.toml
 
 ABCコンテストの問題数は参考によると以下らしい。 (参考: [A - New Generation ABC](https://atcoder.jp/contests/abc214/tasks/abc214_a))
 
+> 1 回目から 125 回目までは 4 問
 > 126 回目から 211 回目までは 6 問
 > 212 回目から 214 回目までは 8 問
 
@@ -148,6 +149,10 @@ ABCコンテストの問題数は参考によると以下らしい。 (参考: [
 
 
 ```bash
+❯ for n in {001..125}; do echo "# abc$n"; for a in {a..d}; do echo "[[bin]]
+name = \"abc${n}_$a\"
+path = \"src/abc$n/$a.rs\""; done; echo; done | pbcopy
+
 ❯ for n in {126..211}; do echo "# abc$n"; for a in {a..f}; do echo "[[bin]]
 name = \"abc${n}_$a\"
 path = \"src/abc$n/$a.rs\""; done; echo; done | pbcopy
