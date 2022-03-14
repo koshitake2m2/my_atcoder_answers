@@ -1,5 +1,5 @@
 [package]
-name = "template"
+name = "sample"
 version = "0.1.0"
 edition = "2021"
 
@@ -11,4 +11,13 @@ proconio = "0.3.6"
 # cargo run --bin a
 [[bin]]
 name = "a"
-path = "src/a.rs"
+path = "src/template/a.rs"
+
+[[bin]]
+name = "b"
+path = "src/template/b.rs"
+
+[[bin]]
+name = "min_max_sample"
+path = "src/min_max_sample.rs"
+

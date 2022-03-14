@@ -1,3 +1,5 @@
+mod b;
+
 use proconio::input;
 
 fn main() {
