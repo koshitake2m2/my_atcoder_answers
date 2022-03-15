@@ -21,3 +21,6 @@ path = "src/template/b.rs"
 name = "min_max_sample"
 path = "src/min_max_sample.rs"
 
+[[bin]]
+name = "string_sample"
+path = "src/string_sample.rs"

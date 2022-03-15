@@ -3,8 +3,8 @@
 !.vscode/settings.json
 .metals
 
-a.out
-a.out.dSYM/
+*.out
+*.out.dSYM/
 
 target
 .bsp
