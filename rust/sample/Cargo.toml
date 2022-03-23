@@ -24,3 +24,7 @@ path = "src/min_max_sample.rs"
 [[bin]]
 name = "string_sample"
 path = "src/string_sample.rs"
+
+[[bin]]
+name = "convert_sample"
+path = "src/convert_sample.rs"
