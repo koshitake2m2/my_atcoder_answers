@@ -12,7 +12,10 @@ mod tests {
         // 要素取得.
         let string1: String = "abcde".to_string();
         assert_eq!(string1.chars().nth(0_usize).unwrap(), 'a');
-        assert_eq!(string1.get(0_usize).unwrap(), 'a');
         assert_eq!(string1.chars().nth(1_usize).unwrap(), 'b');
+
+        // 末尾.
+        assert_eq!("abcde".ends_with("de"), true);
+        assert_eq!("abcde".ends_with("abc"), false);
     }
 }

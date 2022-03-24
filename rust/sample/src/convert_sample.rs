@@ -63,4 +63,23 @@ mod tests {
         let output: Vec<char> = vec!['a', 'b', 'c'];
         assert_eq!(split_and_convert_vec::<char>(input), output);
     }
+
+    #[test]
+    fn test_split_and_convert_vec2() {
+        fn split_and_convert_vec2<T>(input: &str) -> Vec<Vec<T>>
+        where
+            T: FromStr,
+            <T as FromStr>::Err: Debug,
+        {
+            input
+                .split(',')
+                .map(|s| s.split(' ').map(|s2| s2.parse::<T>().unwrap()).collect())
+                .collect()
+        }
+
+        // i32
+        let input = "1 2 3,4 5 6";
+        let output: Vec<Vec<i32>> = vec![vec![1, 2, 3], vec![4, 5, 6]];
+        assert_eq!(split_and_convert_vec2::<i32>(input), output);
+    }
 }

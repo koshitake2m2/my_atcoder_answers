@@ -27,6 +27,8 @@ impl Solve for Solve1 {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use std::fmt::Debug;
+    use std::str::FromStr;
 
     fn test(solve: &dyn Solve) {
         assert_eq!(solve.apply(2, 3, vec![vec![0, 1, 2], vec![3, 4, 5]]), 0);

@@ -5,23 +5,38 @@ use proconio::marker::Chars;
 
 fn main() {
     input! {
-        h: i32,
-        w: i32,
-        a: [[i32; w]; h]
+        s: String,
     }
-    println!("{}", solve1(h, w, a));
+    let solve = Solve1 {};
+    for ss in &solve.apply(s) {
+        println!("{}", *ss);
+    }
 }
 
-fn solve1(h: i32, w: i32, a: Vec<Vec<i32>>) -> i32 {
-    0
+trait Solve {
+    fn apply(&self, s: String) -> Vec<String>;
+}
+
+struct Solve1 {}
+impl Solve for Solve1 {
+    fn apply(&self, s: String) -> Vec<String> {
+        Vec::new()
+    }
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
+    use std::fmt::Debug;
+    use std::str::FromStr;
+
+    fn test(solve: &dyn Solve) {
+        assert_eq!(solve.apply("aaba".to_string()), Vec::new());
+    }
 
     #[test]
     fn test_solve1() {
-        assert_eq!(solve1(2, 3, vec![vec![0, 1, 2], vec![3, 4, 5]]), 0);
+        let solve = &Solve1 {} as &dyn Solve;
+        test(solve);
     }
 }
