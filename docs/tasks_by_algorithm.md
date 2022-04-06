@@ -1,4 +1,4 @@
-# アルゴリズム参考
+# アルゴリズム毎の問題一覧
 
 ## 想定回答との絶対誤差・相対誤差
 - [D - Water Bottle](https://atcoder.jp/contests/abc144/tasks/abc144_d)
