@@ -17,5 +17,17 @@ mod tests {
         // 末尾.
         assert_eq!("abcde".ends_with("de"), true);
         assert_eq!("abcde".ends_with("abc"), false);
+
+        // &str -> Vec<char>
+        let char_vec1: Vec<char> = "abc".chars().collect();
+        assert_eq!(char_vec1, vec!['a', 'b', 'c']);
+
+        // String -> Vec<char>
+        let char_vec2: Vec<char> = "abc".to_string().chars().collect();
+        assert_eq!(char_vec2, vec!['a', 'b', 'c']);
+
+        // Vec<char> -> String
+        let str_ref: String = vec!['a', 'b', 'c'].iter().collect();
+        assert_eq!("abc", &str_ref);
     }
 }

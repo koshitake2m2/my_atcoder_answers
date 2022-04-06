@@ -31,7 +31,7 @@ mod tests {
     use std::str::FromStr;
 
     fn test(solve: &dyn Solve) {
-        assert_eq!(solve.apply("aaba".to_string()), Vec::new());
+        assert_eq!(solve.apply("aaba".to_string()), Vec::<String>::new());
     }
 
     #[test]

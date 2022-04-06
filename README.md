@@ -132,11 +132,6 @@ cargo install cargo-watch
 rustup component add rls rust-src rust-analysis
 ```
 
-### コンテスト毎に行うこと
-
-1. Cargo.tomlにbinが定義されていなければ定義すること. 実行可能ファイルにするため. 
-2. ファイル作成ごとに `Refresh Cargo Projects` をすること. 実行可能にするため.
-
 ### Cargo.toml
 
 ABCコンテストの問題数は参考によると以下らしい。 (参考: [A - New Generation ABC](https://atcoder.jp/contests/abc214/tasks/abc214_a))
@@ -182,3 +177,7 @@ cargo watch -- cargo fmt
 - Settings / Preferences / Languages & Frameworks / Rust / Rustfmt
   - [x] Use rustfmt instead of built-in formatter
   - [x] Run rustfmt on Save
+
+- コンテスト毎に行うこと
+  1. Cargo.tomlにbinが定義されていなければ定義すること. 実行可能ファイルにするため. 
+  2. ファイル作成ごとに `Refresh Cargo Projects` をすること. 実行可能にするため.
